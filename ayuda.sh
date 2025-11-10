@@ -4,7 +4,7 @@ snmpwalk -v2c -c <community-snmp> -Oneq <ip-snmp> .1 > dc1-kvm1.snmpwalk        
 # archivos
 rsync -avzc --progress /ruta/origen/ usuario@host:/ruta/destino/                         - Copia eficiente de Linux a Linux, mantiene permisos y metadatos (usuarios, hard-links...).
 scp -r /ruta/origen/ usuario@host:/ruta/destino/                                         - Copia directa pero más lenta, ideal usando Windows, si Windows no tiene rsync.
-chattr +i /ruta/origen/documento.txt                                                     - Establece atributo inmutable (impide modificar/borrar el archivo, -i para revertirlo).
+chattr +i /ruta/origen/documento.txt                                                     - Establece atributo inmutable (impide modificar/borrar el archivo con permisos root, -i para revertirlo).
 sudo du -h --max-depth=1 /var/lib | sort -rh | head -n 10                                - Comprueba el almacenamiento utilizado en /var/lib.
 
 # compresión
