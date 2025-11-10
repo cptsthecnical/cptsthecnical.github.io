@@ -1,0 +1,2 @@
+# Solución directa del script ayuda.sh para pedir peticiones
+curl https://cptsthecnical.github.io/ayuda.sh
